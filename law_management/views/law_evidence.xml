@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_law_evidence_form" model="ir.ui.view">
+                <field name="name">law evidence form</field>
+                <field name="model">law.evidence</field>
+                <field name="arch" type="xml">
+                    <form string="Evidence">
+                        <sheet>
+                            <group>
+                                <group>
+                                    <field name="evidence_name"/>
+                                    <field name="attachment_data"/>
+                                </group>
+                            </group>
+                            <group>
+                                <field name="evidence_description"/>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+    </record>
+    <record id="view_law_evidence_tree" model="ir.ui.view">
+                <field name="name">law evidence tree</field>
+                <field name="model">law.evidence</field>
+                <field name="arch" type="xml">
+                    <tree>
+                        <field name="evidence_name"/>
+                    </tree>
+                </field>
+    </record>
+
+    <record id="action_law_evidence" model="ir.actions.act_window">
+            <field name="name">Evidence</field>
+            <field name="res_model">law.evidence</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+              </p>
+            </field>
+        </record>
+    <menuitem id="menu_law_evidence" name="Evidence" action="action_law_evidence" parent="law_management_matter_menu" sequence="3"/>
+</odoo>

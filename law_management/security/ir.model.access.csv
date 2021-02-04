@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_law_matter_user,law.matter.user,model_law_matter,base.group_user,1,1,1,1
+access_law_client_user,law.client.user,model_law_client,base.group_user,1,1,1,1
+access_law_evidence_user,law.evidence.user,model_law_evidence,base.group_user,1,1,1,1
